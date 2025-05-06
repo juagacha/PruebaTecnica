@@ -35,7 +35,7 @@ public class SpawnManager : MonoBehaviour
         while (gameActive)
         {
             yield return new WaitForSeconds(2);
-            if (activeObjectsCount < 11) 
+            if (activeObjectsCount < 10) 
             {
                 GameObject temporal = FirstDesactivate();
                 temporal.transform.position = RandomPosition();
