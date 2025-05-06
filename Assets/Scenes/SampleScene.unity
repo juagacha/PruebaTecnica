@@ -836,7 +836,9 @@ MonoBehaviour:
   - {fileID: 4571816122097311273, guid: c72a75b586ec50b4aa074fa27694e804, type: 3}
   - {fileID: 6786614490872454180, guid: f081fcc6f706e874d94208e2e66f4d78, type: 3}
   poolObjects: []
+  activeObjectsCount: 0
   objectsInSceneText: {fileID: 953130036}
+  camera: {fileID: 330585545}
 --- !u!4 &1903946466
 Transform:
   m_ObjectHideFlags: 0

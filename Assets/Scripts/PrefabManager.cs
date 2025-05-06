@@ -3,8 +3,6 @@ using UnityEngine;
 public class PrefabManager : MonoBehaviour
 {
     public Renderer Renderer;
-    //public Camera camera;
-    public SpawnManager SpawnManager;
     private float colorR, colorG, colorB, colorA;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,18 +13,7 @@ public class PrefabManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
-    {
-        //RaycastHit hit;//info
-        //Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-        //if (Physics.Raycast(ray, out hit))
-        //{
-        //    Debug.Log(hit.collider.gameObject.name);
- 
-        //}
-
-       
-    }
+    
     float GetRandomColor()
     {
         return Random.Range(0f, 1f);

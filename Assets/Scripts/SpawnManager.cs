@@ -15,7 +15,8 @@ public class SpawnManager : MonoBehaviour
     private float positionZ = 3.5f;
     public TextMeshProUGUI objectsInSceneText;
     private bool gameActive = true;
-
+    public Camera camera;
+    private GameObject temporal;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,9 +26,22 @@ public class SpawnManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        RaycastHit hit;//info
+        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
+        {
+           
+            if (hit.collider.gameObject.name != "Floor") 
+            {
+                temporal = GameObject.Find(hit.collider.gameObject.name);
+                temporal.SetActive(false);
+                activeObjectsCount -= 1;
+                objectsInSceneText.text = "Objects In Scene: " + activeObjectsCount;
+            }
+           
+        }
     }
 
     IEnumerator SpawnPrefabs() 
