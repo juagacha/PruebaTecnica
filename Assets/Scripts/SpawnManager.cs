@@ -10,7 +10,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] prefabs = new GameObject[2];
     private int poolSize = 10;
     [SerializeField] private List<GameObject> poolObjects;
-    private int activeObjectsCount = 0;
+    public int activeObjectsCount = 0;
     private float positionX = 4f;
     private float positionZ = 3.5f;
     public TextMeshProUGUI objectsInSceneText;
@@ -83,6 +83,4 @@ public class SpawnManager : MonoBehaviour
     }
 
 
-
-
- }
+}
